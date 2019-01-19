@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">WatchList</string>
+    <string name="Title">WatchList</string>
+    <string name="tagline">Create, Add and Enjoy</string>
+    <string name="signup">SIGN UP</string>
+    <string name="alreadyaccount">Already Have a WatchList Account?</string>
+    <string name="login">Login</string>
+    <string name="entername">Enter your name</string>
+    <string name="enteremail">Enter your Email ID</string>
+    <string name="entermobile">Enter your mobile number</string>
+    <string name="enterpassword">Enter your password</string>
+    <string name="loginemail">username</string>
+    <string name="loginpassword">password</string>
+    <string name="add2list">Add to List</string>
+    <string name="seelist">See List</string>
+    <string name="entermoviename">Enter Movie Name</string>
+    <string name="entergenre">Enter Genre</string>
+    <string name="enterdirector">Enter Directors Name</string>
+    <string name="add">ADD</string>
+</resources>

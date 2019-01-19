@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorTheme">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Title"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:layout_gravity="center"
+            android:paddingTop="10dp"
+            android:fontFamily="serif-monospace"
+            android:layout_marginTop="150dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tagline"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+        <Button
+            android:layout_marginTop="100dp"
+            android:layout_width="150dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:background="@drawable/button_style"
+            android:layout_gravity="center"
+            android:text="@string/signup"
+            android:textColor="@color/colorTheme"
+            android:textStyle="bold"
+            android:id="@+id/homesignup"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alreadyaccount"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:padding="10dp" />
+        <Button
+            android:layout_width="150dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:background="@drawable/button_style_two"
+            android:layout_gravity="center"
+            android:text="@string/login"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/homelogin"
+            />
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
