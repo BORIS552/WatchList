@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.company.turntotech.watchlist.model.User;
+import com.company.turntotech.watchlist.sqliteDb.UserRepo;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -28,14 +32,45 @@ public class SignUpActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String str_name = name.getText().toString();
-                String str_email = email.getText().toString();
-                String str_password = password.getText().toString();
-                String str_mobile = mobile.getText().toString();
-                //register data
-                Intent i = new Intent(SignUpActivity.this, MovieHomeActivity.class);
-                startActivity(i);
+               if(name.getText().toString().trim().isEmpty()){
+                   Toast.makeText(SignUpActivity.this,"Name cannot be empty", Toast.LENGTH_SHORT).show();
+                   return;
+               }
+
+               if (email.getText().toString().trim().isEmpty()){
+                   Toast.makeText(SignUpActivity.this, "Email cannot be empty", Toast.LENGTH_SHORT).show();
+                   return;
+               }
+
+               if (password.getText().toString().trim().isEmpty()){
+                   Toast.makeText(SignUpActivity.this, "Please Enter a password", Toast.LENGTH_SHORT).show();
+                   return;
+               }
+
+               if (mobile.getText().toString().trim().isEmpty()){
+                   Toast.makeText(SignUpActivity.this, "Please Enter your mobile number", Toast.LENGTH_SHORT).show();
+                   return;
+               }
+               registerUser();
             }
         });
+    }
+
+    private void registerUser(){
+        UserRepo userRepo = new UserRepo(this);
+        if(!userRepo.checkUser(email.getText().toString().trim())){
+            User user = new User();
+            user.setName(name.getText().toString().trim());
+            user.setEmail(email.getText().toString().trim());
+            user.setPassword(password.getText().toString().trim());
+            user.setMobile(mobile.getText().toString().trim());
+            userRepo.insert(user);
+            Toast.makeText(this, "Registered Successfully!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(SignUpActivity.this, MovieHomeActivity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            Toast.makeText(this, "Account Exists, please sign in", Toast.LENGTH_SHORT).show();
+        }
     }
 }

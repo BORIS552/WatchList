@@ -4,7 +4,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.company.turntotech.watchlist.model.User;
 
 public class SQLiteUserHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
@@ -30,5 +29,6 @@ public class SQLiteUserHelper extends SQLiteOpenHelper {
 
         onCreate(db);
     }
+
 
 }
