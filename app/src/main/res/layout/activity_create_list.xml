@@ -53,7 +53,7 @@
             android:text="@string/add"
             android:textColor="@color/colorTheme"
             android:textStyle="bold"
-            android:id="@+id/signup"
+            android:id="@+id/add"
             />
     </LinearLayout>
 
