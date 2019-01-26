@@ -4,15 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SeeListActivity"
+    tools:context=".EditMovieActivity"
     android:background="@color/colorTheme">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ListView
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/movielist"/>
+            android:id="@+id/editName"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editGenre"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editDirector"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

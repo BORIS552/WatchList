@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:hint="@string/enterdirector"
-            android:inputType="phone"
+            android:inputType="text"
             android:textColorHint="@color/white"
             android:textStyle="italic"
             android:id="@+id/director"/>

@@ -26,7 +26,8 @@
             android:theme="@style/HomeTheme" />
         <activity android:name=".MovieHomeActivity" />
         <activity android:name=".CreateListActivity" />
-        <activity android:name=".SeeListActivity"></activity>
+        <activity android:name=".SeeListActivity" />
+        <activity android:name=".EditMovieActivity"></activity>
     </application>
 
 </manifest>

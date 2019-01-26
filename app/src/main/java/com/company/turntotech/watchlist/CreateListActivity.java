@@ -1,6 +1,7 @@
 package com.company.turntotech.watchlist;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -64,5 +65,9 @@ public class CreateListActivity extends AppCompatActivity {
         movie.setGenre(genre.getText().toString().trim());
         movie.setDirector(director.getText().toString().trim());
         movieRepo.insert(movie,user_email);
+        Toast.makeText(this,"Movie Listed",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(CreateListActivity.this, MovieHomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
