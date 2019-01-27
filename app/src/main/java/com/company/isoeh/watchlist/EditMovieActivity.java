@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import android.content.Intent;
 import com.company.isoeh.watchlist.model.Movie;
 import com.company.isoeh.watchlist.sqliteDb.MovieRepo;
 
@@ -48,6 +48,9 @@ public class EditMovieActivity extends AppCompatActivity {
               if (stat){
                   Toast.makeText(EditMovieActivity.this, "Updated Successfully", Toast.LENGTH_SHORT).show();
               }
+              Intent i  = new Intent(EditMovieActivity.this, MovieHomeActivity.class);
+              startActivity(i);
+              finish();
             }
         });
 
@@ -59,6 +62,9 @@ public class EditMovieActivity extends AppCompatActivity {
                 if (stat){
                     Toast.makeText(EditMovieActivity.this, "Deleted Successfully", Toast.LENGTH_SHORT).show();
                 }
+                Intent i  = new Intent(EditMovieActivity.this, MovieHomeActivity.class);
+                startActivity(i);
+                finish();
             }
         });
     }

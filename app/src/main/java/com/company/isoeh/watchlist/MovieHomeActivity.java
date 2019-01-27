@@ -16,13 +16,14 @@ public class MovieHomeActivity extends AppCompatActivity {
     private Button  logout;
     SharedPreferences sharedPreferences;
     public static final String mypreference = "a";
-    public static final String Email = "email";
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_home);
         addtolist = (CardView)findViewById(R.id.addtolist);
         seelist = (CardView)findViewById(R.id.seelist);
+        logout = (Button)findViewById(R.id.logout);
 
         addtolist.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,8 +49,10 @@ public class MovieHomeActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.clear();
             editor.apply();
+            Intent i = new Intent(MovieHomeActivity.this, MainActivity.class);
+            startActivity(i);
             finish();
-            
+
             }
         });
     }
