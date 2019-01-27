@@ -1,4 +1,4 @@
-package com.company.turntotech.watchlist.sqliteDb;
+package com.company.isoeh.watchlist.sqliteDb;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.company.turntotech.watchlist.model.Movie;
+import com.company.isoeh.watchlist.model.Movie;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -53,12 +53,23 @@ public class MovieRepo {
         return movieList;
     }
 
-    public void updateMovie(Movie movie, String id){
+    public boolean updateMovie(Movie movie, String id){
         SQLiteDatabase db = sqLiteMovieHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_NAME,movie.getName());
         values.put(COLUMN_GENRE, movie.getGenre());
         values.put(COLUMN_DIRECTOR, movie.getDirector());
+        String where = "id = ?";
+        String[] whereArgs = {id};
+        boolean status = db.update(TABLE_NAME,values,where,whereArgs) > 0;
+        db.close();
+        return status;
+    }
 
+    public boolean deleteMovie(String id){
+        SQLiteDatabase db = sqLiteMovieHelper.getWritableDatabase();
+        boolean status = db.delete(TABLE_NAME,"id ='" + id + "'", null) > 0;
+        db.close();
+        return status;
     }
 }

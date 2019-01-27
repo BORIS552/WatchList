@@ -1,4 +1,4 @@
-package com.company.turntotech.watchlist;
+package com.company.isoeh.watchlist;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +11,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-import com.company.turntotech.watchlist.sqliteDb.MovieRepo;
+import com.company.isoeh.watchlist.sqliteDb.MovieRepo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,11 +34,12 @@ public class SeeListActivity extends AppCompatActivity {
         ListView lv = (ListView)findViewById(R.id.movielist);
         ListAdapter adapter = new SimpleAdapter(SeeListActivity.this,movieList,R.layout.list_row,new String[]{"name","genre","director"}, new int[]{R.id.rowname,R.id.rowgenre
         ,R.id.rowdirector});
-        final ArrayList<HashMap<String, String>> movie = new ArrayList<>();
+
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ArrayList<HashMap<String, String>> movie = new ArrayList<>();
                 String movie_id = movie.get(position).get("id");
                 String name = movie.get(position).get("name");
                 String genre = movie.get(position).get("genre");

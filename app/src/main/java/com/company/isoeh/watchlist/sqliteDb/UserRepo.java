@@ -1,11 +1,11 @@
-package com.company.turntotech.watchlist.sqliteDb;
+package com.company.isoeh.watchlist.sqliteDb;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.company.turntotech.watchlist.model.User;
+import com.company.isoeh.watchlist.model.User;
 
 public class UserRepo {
 

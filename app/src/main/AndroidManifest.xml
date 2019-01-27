@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.company.turntotech.watchlist">
+    package="com.company.isoeh.watchlist">
 
     <application
         android:allowBackup="true"
@@ -27,7 +27,7 @@
         <activity android:name=".MovieHomeActivity" />
         <activity android:name=".CreateListActivity" />
         <activity android:name=".SeeListActivity" />
-        <activity android:name=".EditMovieActivity"></activity>
+        <activity android:name=".EditMovieActivity"/>
     </application>
 
 </manifest>

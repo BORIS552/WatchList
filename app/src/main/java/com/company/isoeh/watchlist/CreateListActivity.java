@@ -1,4 +1,4 @@
-package com.company.turntotech.watchlist;
+package com.company.isoeh.watchlist;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,8 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.company.turntotech.watchlist.model.Movie;
-import com.company.turntotech.watchlist.sqliteDb.MovieRepo;
+import com.company.isoeh.watchlist.model.Movie;
+import com.company.isoeh.watchlist.sqliteDb.MovieRepo;
 
 public class CreateListActivity extends AppCompatActivity {
 

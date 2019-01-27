@@ -1,13 +1,14 @@
-package com.company.turntotech.watchlist;
+package com.company.isoeh.watchlist;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import com.company.turntotech.watchlist.model.Movie;
-import com.company.turntotech.watchlist.sqliteDb.MovieRepo;
+import com.company.isoeh.watchlist.model.Movie;
+import com.company.isoeh.watchlist.sqliteDb.MovieRepo;
 
 public class EditMovieActivity extends AppCompatActivity {
 
@@ -43,7 +44,21 @@ public class EditMovieActivity extends AppCompatActivity {
                 movie.setGenre(genre_str);
                 movie.setDirector(director_str);
                 movieRepo = new MovieRepo(EditMovieActivity.this);
-                movieRepo.updateMovie(movie, getIntent().getStringExtra("id"));
+              boolean stat =  movieRepo.updateMovie(movie, getIntent().getStringExtra("id"));
+              if (stat){
+                  Toast.makeText(EditMovieActivity.this, "Updated Successfully", Toast.LENGTH_SHORT).show();
+              }
+            }
+        });
+
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                movieRepo = new MovieRepo(EditMovieActivity.this);
+                boolean stat = movieRepo.deleteMovie(getIntent().getStringExtra("id"));
+                if (stat){
+                    Toast.makeText(EditMovieActivity.this, "Deleted Successfully", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

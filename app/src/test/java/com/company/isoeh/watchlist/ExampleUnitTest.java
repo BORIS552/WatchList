@@ -1,4 +1,4 @@
-package com.company.turntotech.watchlist;
+package com.company.isoeh.watchlist;
 
 import org.junit.Test;
 

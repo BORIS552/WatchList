@@ -1,4 +1,4 @@
-package com.company.turntotech.watchlist.sqliteDb;
+package com.company.isoeh.watchlist.sqliteDb;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

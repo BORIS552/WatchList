@@ -1,4 +1,4 @@
-package com.company.turntotech.watchlist;
+package com.company.isoeh.watchlist;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.company.turntotech.watchlist.sqliteDb.UserRepo;
+import com.company.isoeh.watchlist.sqliteDb.UserRepo;
 
 public class LoginActivity extends AppCompatActivity {
 

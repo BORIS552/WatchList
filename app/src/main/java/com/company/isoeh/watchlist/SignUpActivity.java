@@ -1,4 +1,4 @@
-package com.company.turntotech.watchlist;
+package com.company.isoeh.watchlist;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.company.turntotech.watchlist.model.User;
-import com.company.turntotech.watchlist.sqliteDb.UserRepo;
+import com.company.isoeh.watchlist.model.User;
+import com.company.isoeh.watchlist.sqliteDb.UserRepo;
 
 public class SignUpActivity extends AppCompatActivity {
 

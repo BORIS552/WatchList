@@ -1,4 +1,4 @@
-package com.company.turntotech.watchlist.model;
+package com.company.isoeh.watchlist.model;
 
 public class User {
     private String name;

@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.company.turntotech.watchlist"
+        applicationId "com.company.isoeh.watchlist"
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
