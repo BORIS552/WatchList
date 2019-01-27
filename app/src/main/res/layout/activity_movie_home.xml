@@ -10,7 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="50dp">
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingTop="50dp">
         <android.support.v7.widget.CardView
             android:layout_width="180dp"
             android:layout_height="150dp"
@@ -29,7 +31,7 @@
                 android:textSize="18sp"/>
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="40dp"
             android:layout_width="180dp"
             android:layout_height="150dp"
             app:cardBackgroundColor="@color/white"
@@ -47,6 +49,18 @@
                 android:textStyle="bold"
                 android:textSize="18sp"/>
         </android.support.v7.widget.CardView>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:background="@drawable/button_style_two"
+            android:layout_gravity="center"
+            android:text="@string/logout"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/logout"
+            />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

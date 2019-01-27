@@ -5,6 +5,7 @@
     <string name="signup">SIGN UP</string>
     <string name="alreadyaccount">Already Have a WatchList Account?</string>
     <string name="login">Login</string>
+    <string name="logout">Logout</string>
     <string name="entername">Enter your name</string>
     <string name="enteremail">Enter your Email ID</string>
     <string name="entermobile">Enter your mobile number</string>

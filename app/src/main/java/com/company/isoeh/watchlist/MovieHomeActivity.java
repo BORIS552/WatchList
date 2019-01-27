@@ -1,15 +1,22 @@
 package com.company.isoeh.watchlist;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.Button;
+import android.content.SharedPreferences;
 
 public class MovieHomeActivity extends AppCompatActivity {
 
     private CardView addtolist;
     private CardView seelist;
+    private Button  logout;
+    SharedPreferences sharedPreferences;
+    public static final String mypreference = "a";
+    public static final String Email = "email";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +38,18 @@ public class MovieHomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MovieHomeActivity.this, SeeListActivity.class);
                 startActivity(i);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sharedPreferences = getSharedPreferences(mypreference, Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.clear();
+            editor.apply();
+            finish();
+            
             }
         });
     }

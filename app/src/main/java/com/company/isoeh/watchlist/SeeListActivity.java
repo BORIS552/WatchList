@@ -22,7 +22,7 @@ public class SeeListActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     public static final String mypreference = "a";
     public static final String Email = "email";
-
+    private ArrayList<HashMap<String, String>> movieList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,7 @@ public class SeeListActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences(mypreference, Context.MODE_PRIVATE);
         user_email = sharedPreferences.getString(Email,"");
         movieRepo = new MovieRepo(this);
-        final ArrayList<HashMap<String, String>> movieList = movieRepo.getMovies(user_email);
+        movieList = movieRepo.getMovies(user_email);
         ListView lv = (ListView)findViewById(R.id.movielist);
         ListAdapter adapter = new SimpleAdapter(SeeListActivity.this,movieList,R.layout.list_row,new String[]{"name","genre","director"}, new int[]{R.id.rowname,R.id.rowgenre
         ,R.id.rowdirector});
@@ -39,11 +39,12 @@ public class SeeListActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ArrayList<HashMap<String, String>> movie = new ArrayList<>();
-                String movie_id = movie.get(position).get("id");
-                String name = movie.get(position).get("name");
-                String genre = movie.get(position).get("genre");
-                String director = movie.get(position).get("director");
+                HashMap<String, String> hashMovie = movieList.get(position);
+
+               String movie_id = hashMovie.get("id");
+               String name = hashMovie.get("name");
+               String genre = hashMovie.get("genre");
+               String director = hashMovie.get("director");
 
                 Intent i = new Intent(SeeListActivity.this, EditMovieActivity.class);
                 i.putExtra("id", movie_id);
