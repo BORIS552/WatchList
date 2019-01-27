@@ -17,4 +17,6 @@
     <string name="entergenre">Enter Genre</string>
     <string name="enterdirector">Enter Directors Name</string>
     <string name="add">ADD</string>
+    <string name="delete">DELETE</string>
+    <string name="update">UPDATE</string>
 </resources>

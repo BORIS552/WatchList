@@ -9,19 +9,60 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:padding="20dp">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editName"/>
+            android:id="@+id/editName"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center"
+            />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editGenre"/>
+            android:id="@+id/editGenre"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editDirector"/>
+            android:id="@+id/editDirector"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center"/>
+        <Button
+            android:layout_marginTop="50dp"
+            android:layout_width="150dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:background="@drawable/button_style"
+            android:layout_gravity="center"
+            android:text="@string/update"
+            android:textColor="@color/colorTheme"
+            android:textStyle="bold"
+            android:id="@+id/update"
+            />
+        <Button
+            android:layout_marginTop="50dp"
+            android:layout_width="150dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:background="@drawable/button_style_two"
+            android:layout_gravity="center"
+            android:text="@string/delete"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/delete"
+            />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

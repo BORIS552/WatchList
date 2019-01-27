@@ -53,7 +53,12 @@ public class MovieRepo {
         return movieList;
     }
 
-    public void updateMovie(){
+    public void updateMovie(Movie movie, String id){
+        SQLiteDatabase db = sqLiteMovieHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_NAME,movie.getName());
+        values.put(COLUMN_GENRE, movie.getGenre());
+        values.put(COLUMN_DIRECTOR, movie.getDirector());
 
     }
 }
